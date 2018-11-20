@@ -25,8 +25,7 @@ class WikipediaAPIClient: WikipediaAPIClientProtocol {
     func search(_ query: String) -> Single<[WikipediaPage]> {
         let request = createRequest(query)
         
-        return session
-            .rx
+        return session.rx
             .response(request: request)
             .map(mapToResult)
             .catchErrorJustReturn([])
@@ -34,11 +33,11 @@ class WikipediaAPIClient: WikipediaAPIClientProtocol {
     }
     
     private func createRequest(_ query: String) -> URLRequest {
-        let components = initializeComponent("https://ja.wikipedia.org", query: query)
+        let components = initializeComponent(host: "https://ja.wikipedia.org", query: query)
         return URLRequest(url: components.url!)
     }
     
-    private func initializeComponent(_ host: String, query: String) -> URLComponents {
+    private func initializeComponent(host: String, query: String) -> URLComponents {
         var components = URLComponents(string: host)!
         components.path = "/w/api.php"
         components.queryItems = [
