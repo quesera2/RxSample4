@@ -51,7 +51,7 @@ struct WikipediaSearchViewModel: ViewModelType {
         
         let result = searchWord.filter { $0.count >= 3 }
             .debounce(0.3, scheduler: debounceScheduler)
-            .flatMap(self.apiClient.search)
+            .flatMapLatest(apiClient.search)
             .share(replay: 1)
         
         let title = Observable.combineLatest(searchWord, result, resultSelector: createTitle)
