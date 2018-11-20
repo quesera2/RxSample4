@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8E9D10C021A42BDE00D73E7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D10BF21A42BDE00D73E7A /* AppDelegate.swift */; };
-		8E9D10C221A42BDE00D73E7A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D10C121A42BDE00D73E7A /* ViewController.swift */; };
-		8E9D10C521A42BDE00D73E7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D10C321A42BDE00D73E7A /* Main.storyboard */; };
+		8E9D10C221A42BDE00D73E7A /* WikipediaSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D10C121A42BDE00D73E7A /* WikipediaSearchViewController.swift */; };
+		8E9D10C521A42BDE00D73E7A /* WikipediaSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D10C321A42BDE00D73E7A /* WikipediaSearch.storyboard */; };
 		8E9D10C721A42BDF00D73E7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D10C621A42BDF00D73E7A /* Assets.xcassets */; };
 		8E9D10CA21A42BDF00D73E7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D10C821A42BDF00D73E7A /* LaunchScreen.storyboard */; };
 		8EFEDB2921A42EE900859672 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EFEDB2721A42EE900859672 /* RxSwift.framework */; };
@@ -17,13 +17,15 @@
 		8EFEDB2C21A42FE900859672 /* WikipediaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEDB2B21A42FE900859672 /* WikipediaPage.swift */; };
 		8EFEDB3021A4328000859672 /* WikipediaSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEDB2F21A4328000859672 /* WikipediaSearchResponse.swift */; };
 		8EFEDB3221A4337700859672 /* WikipediaAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEDB3121A4337700859672 /* WikipediaAPIClient.swift */; };
+		8EFEDB3521A43A6E00859672 /* WikipediaSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEDB3421A43A6E00859672 /* WikipediaSearchViewModel.swift */; };
+		8EFEDB3921A43F0700859672 /* WikipediaSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEDB3821A43F0700859672 /* WikipediaSearchResultTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		8E9D10BC21A42BDE00D73E7A /* RxSample4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSample4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E9D10BF21A42BDE00D73E7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8E9D10C121A42BDE00D73E7A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8E9D10C421A42BDE00D73E7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E9D10C121A42BDE00D73E7A /* WikipediaSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaSearchViewController.swift; sourceTree = "<group>"; };
+		8E9D10C421A42BDE00D73E7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WikipediaSearch.storyboard; sourceTree = "<group>"; };
 		8E9D10C621A42BDF00D73E7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E9D10C921A42BDF00D73E7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E9D10CB21A42BDF00D73E7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -32,6 +34,8 @@
 		8EFEDB2B21A42FE900859672 /* WikipediaPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaPage.swift; sourceTree = "<group>"; };
 		8EFEDB2F21A4328000859672 /* WikipediaSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaSearchResponse.swift; sourceTree = "<group>"; };
 		8EFEDB3121A4337700859672 /* WikipediaAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaAPIClient.swift; sourceTree = "<group>"; };
+		8EFEDB3421A43A6E00859672 /* WikipediaSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaSearchViewModel.swift; sourceTree = "<group>"; };
+		8EFEDB3821A43F0700859672 /* WikipediaSearchResultTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaSearchResultTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,11 +71,10 @@
 		8E9D10BE21A42BDE00D73E7A /* RxSample4 */ = {
 			isa = PBXGroup;
 			children = (
+				8E9D10BF21A42BDE00D73E7A /* AppDelegate.swift */,
 				8EFEDB2E21A42FFB00859672 /* Model */,
 				8EFEDB3321A4337B00859672 /* API */,
-				8E9D10BF21A42BDE00D73E7A /* AppDelegate.swift */,
-				8E9D10C121A42BDE00D73E7A /* ViewController.swift */,
-				8E9D10C321A42BDE00D73E7A /* Main.storyboard */,
+				8EFEDB3621A43A7800859672 /* Screens */,
 				8E9D10C621A42BDF00D73E7A /* Assets.xcassets */,
 				8E9D10C821A42BDF00D73E7A /* LaunchScreen.storyboard */,
 				8E9D10CB21A42BDF00D73E7A /* Info.plist */,
@@ -103,6 +106,25 @@
 				8EFEDB2F21A4328000859672 /* WikipediaSearchResponse.swift */,
 			);
 			path = API;
+			sourceTree = "<group>";
+		};
+		8EFEDB3621A43A7800859672 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8EFEDB3721A43A8C00859672 /* WikipediaSearch */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8EFEDB3721A43A8C00859672 /* WikipediaSearch */ = {
+			isa = PBXGroup;
+			children = (
+				8EFEDB3421A43A6E00859672 /* WikipediaSearchViewModel.swift */,
+				8E9D10C121A42BDE00D73E7A /* WikipediaSearchViewController.swift */,
+				8EFEDB3821A43F0700859672 /* WikipediaSearchResultTableViewCell.swift */,
+				8E9D10C321A42BDE00D73E7A /* WikipediaSearch.storyboard */,
+			);
+			path = WikipediaSearch;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,7 +188,7 @@
 			files = (
 				8E9D10CA21A42BDF00D73E7A /* LaunchScreen.storyboard in Resources */,
 				8E9D10C721A42BDF00D73E7A /* Assets.xcassets in Resources */,
-				8E9D10C521A42BDE00D73E7A /* Main.storyboard in Resources */,
+				8E9D10C521A42BDE00D73E7A /* WikipediaSearch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,8 +224,10 @@
 			files = (
 				8EFEDB3021A4328000859672 /* WikipediaSearchResponse.swift in Sources */,
 				8EFEDB2C21A42FE900859672 /* WikipediaPage.swift in Sources */,
-				8E9D10C221A42BDE00D73E7A /* ViewController.swift in Sources */,
+				8E9D10C221A42BDE00D73E7A /* WikipediaSearchViewController.swift in Sources */,
 				8E9D10C021A42BDE00D73E7A /* AppDelegate.swift in Sources */,
+				8EFEDB3921A43F0700859672 /* WikipediaSearchResultTableViewCell.swift in Sources */,
+				8EFEDB3521A43A6E00859672 /* WikipediaSearchViewModel.swift in Sources */,
 				8EFEDB3221A4337700859672 /* WikipediaAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -211,12 +235,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8E9D10C321A42BDE00D73E7A /* Main.storyboard */ = {
+		8E9D10C321A42BDE00D73E7A /* WikipediaSearch.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				8E9D10C421A42BDE00D73E7A /* Base */,
 			);
-			name = Main.storyboard;
+			name = WikipediaSearch.storyboard;
 			sourceTree = "<group>";
 		};
 		8E9D10C821A42BDF00D73E7A /* LaunchScreen.storyboard */ = {
