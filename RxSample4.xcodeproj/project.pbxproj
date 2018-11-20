@@ -12,6 +12,8 @@
 		8E9D10C521A42BDE00D73E7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D10C321A42BDE00D73E7A /* Main.storyboard */; };
 		8E9D10C721A42BDF00D73E7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D10C621A42BDF00D73E7A /* Assets.xcassets */; };
 		8E9D10CA21A42BDF00D73E7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D10C821A42BDF00D73E7A /* LaunchScreen.storyboard */; };
+		8EFEDB2921A42EE900859672 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EFEDB2721A42EE900859672 /* RxSwift.framework */; };
+		8EFEDB2A21A42EE900859672 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EFEDB2821A42EE900859672 /* RxCocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		8E9D10C621A42BDF00D73E7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E9D10C921A42BDF00D73E7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E9D10CB21A42BDF00D73E7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EFEDB2721A42EE900859672 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		8EFEDB2821A42EE900859672 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EFEDB2921A42EE900859672 /* RxSwift.framework in Frameworks */,
+				8EFEDB2A21A42EE900859672 /* RxCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +46,7 @@
 			children = (
 				8E9D10BE21A42BDE00D73E7A /* RxSample4 */,
 				8E9D10BD21A42BDE00D73E7A /* Products */,
+				8EFEDB2621A42EE800859672 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,15 @@
 			path = RxSample4;
 			sourceTree = "<group>";
 		};
+		8EFEDB2621A42EE800859672 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8EFEDB2821A42EE900859672 /* RxCocoa.framework */,
+				8EFEDB2721A42EE900859672 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,6 +90,7 @@
 				8E9D10B821A42BDE00D73E7A /* Sources */,
 				8E9D10B921A42BDE00D73E7A /* Frameworks */,
 				8E9D10BA21A42BDE00D73E7A /* Resources */,
+				8EFEDB2521A42E9400859672 /* Carthage */,
 			);
 			buildRules = (
 			);
@@ -129,6 +146,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		8EFEDB2521A42E9400859672 /* Carthage */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+			);
+			name = Carthage;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8E9D10B821A42BDE00D73E7A /* Sources */ = {
@@ -283,6 +323,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxSample4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -300,6 +344,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxSample4/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
