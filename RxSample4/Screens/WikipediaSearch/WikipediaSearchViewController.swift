@@ -20,8 +20,7 @@ class WikipediaSearchViewController: UIViewController {
     
     private let viewModel: WikipediaSearchViewModel = {
         let apiClient = WikipediaAPIClient()
-        let dependency = WikipediaSearchViewModel.Dependency(apiClient: apiClient,
-                                                             debounceScheduler: MainScheduler.instance)
+        let dependency = WikipediaSearchViewModel.Dependency(apiClient: apiClient)
         return WikipediaSearchViewModel(dependency)
     }()
     
@@ -35,7 +34,9 @@ class WikipediaSearchViewController: UIViewController {
         let query = searchBar.rx
             .text
             .orEmpty
+            .debounce(0.3, scheduler: MainScheduler.instance)
             .asObservable()
+        
         let input = WikipediaSearchViewModel.Input(queryText: query)
         
         let output = viewModel.transform(input)

@@ -24,7 +24,6 @@ struct WikipediaSearchViewModel: ViewModelType {
     
     struct Dependency {
         let apiClient: WikipediaAPIClientProtocol
-        let debounceScheduler: SchedulerType
     }
     
     struct Input {
@@ -37,11 +36,9 @@ struct WikipediaSearchViewModel: ViewModelType {
     }
     
     private let apiClient: WikipediaAPIClientProtocol
-    private let debounceScheduler: SchedulerType
     
     init(_ dependency: Dependency) {
-        self.apiClient = dependency.apiClient
-        self.debounceScheduler = dependency.debounceScheduler
+        apiClient = dependency.apiClient
     }
     
     func transform(_ input: Input) -> Output {
@@ -50,7 +47,6 @@ struct WikipediaSearchViewModel: ViewModelType {
             .share(replay: 1)
         
         let result = searchWord.filter { $0.count >= 3 }
-            .debounce(0.3, scheduler: debounceScheduler)
             .flatMapLatest(apiClient.search)
             .share(replay: 1)
         
