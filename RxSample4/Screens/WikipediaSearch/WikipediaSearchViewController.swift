@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import SafariServices
 
-class WikipediaSearchViewController: UIViewController {
+final class WikipediaSearchViewController: UIViewController {
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!

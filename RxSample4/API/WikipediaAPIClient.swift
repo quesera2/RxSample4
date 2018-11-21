@@ -14,7 +14,7 @@ protocol WikipediaAPIClientProtocol {
     func search(_ query: String) -> Single<[WikipediaPage]>
 }
 
-class WikipediaAPIClient: WikipediaAPIClientProtocol {
+final class WikipediaAPIClient: WikipediaAPIClientProtocol {
 
     private let session: URLSession
     

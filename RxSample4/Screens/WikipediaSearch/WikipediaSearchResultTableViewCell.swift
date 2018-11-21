@@ -8,7 +8,7 @@
 
 import UIKit
 
-class WikipediaSearchResultTableViewCell: UITableViewCell {
+final class WikipediaSearchResultTableViewCell: UITableViewCell {
     
     func update(_ data: WikipediaPage) {
         textLabel?.text = data.title
