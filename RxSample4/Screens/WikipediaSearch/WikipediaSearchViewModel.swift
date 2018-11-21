@@ -62,7 +62,7 @@ struct WikipediaSearchViewModel: ViewModelType {
                       showWikipediaPage: selectedUrl.asSignal(onErrorSignalWith: .empty()))
     }
     
-    private func createTitle(query: String, result: [WikipediaPage]) -> String {
+    internal func createTitle(query: String, result: [WikipediaPage]) -> String {
         if query.count < 3 {
             return "Wikipedia Search API"
         } else {

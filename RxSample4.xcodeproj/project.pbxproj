@@ -13,6 +13,14 @@
 		8E9D10C721A42BDF00D73E7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D10C621A42BDF00D73E7A /* Assets.xcassets */; };
 		8E9D10CA21A42BDF00D73E7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D10C821A42BDF00D73E7A /* LaunchScreen.storyboard */; };
 		8EFBC31A21A58B9F00E03284 /* WikipediaAPIClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBC31921A58B9F00E03284 /* WikipediaAPIClientTest.swift */; };
+		8EFBC31C21A59F4300E03284 /* MockWikipediaAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBC31B21A59F4300E03284 /* MockWikipediaAPIClient.swift */; };
+		8EFBC32021A5A04100E03284 /* WikipediaSearchViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBC31F21A5A04100E03284 /* WikipediaSearchViewModelTest.swift */; };
+		8EFBC32321A5A2F200E03284 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EFEDB2821A42EE900859672 /* RxCocoa.framework */; };
+		8EFBC32421A5A2F200E03284 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EFEDB2721A42EE900859672 /* RxSwift.framework */; };
+		8EFBC32821A5A2F300E03284 /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EFBC32621A5A2F300E03284 /* RxTest.framework */; };
+		8EFBC32A21A5AD1A00E03284 /* RxTest.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8EFBC32621A5A2F300E03284 /* RxTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8EFBC32B21A5AD1A00E03284 /* RxCocoa.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8EFEDB2821A42EE900859672 /* RxCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		8EFBC32C21A5AD1A00E03284 /* RxSwift.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 8EFEDB2721A42EE900859672 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		8EFEDB2921A42EE900859672 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EFEDB2721A42EE900859672 /* RxSwift.framework */; };
 		8EFEDB2A21A42EE900859672 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EFEDB2821A42EE900859672 /* RxCocoa.framework */; };
 		8EFEDB2C21A42FE900859672 /* WikipediaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEDB2B21A42FE900859672 /* WikipediaPage.swift */; };
@@ -32,6 +40,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8EFBC32921A5AD0600E03284 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8EFBC32A21A5AD1A00E03284 /* RxTest.framework in CopyFiles */,
+				8EFBC32B21A5AD1A00E03284 /* RxCocoa.framework in CopyFiles */,
+				8EFBC32C21A5AD1A00E03284 /* RxSwift.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		8E9D10BC21A42BDE00D73E7A /* RxSample4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSample4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E9D10BF21A42BDE00D73E7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -43,6 +66,9 @@
 		8EFBC30F21A5894F00E03284 /* RxSample4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSample4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFBC31321A5894F00E03284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EFBC31921A58B9F00E03284 /* WikipediaAPIClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaAPIClientTest.swift; sourceTree = "<group>"; };
+		8EFBC31B21A59F4300E03284 /* MockWikipediaAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockWikipediaAPIClient.swift; sourceTree = "<group>"; };
+		8EFBC31F21A5A04100E03284 /* WikipediaSearchViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaSearchViewModelTest.swift; sourceTree = "<group>"; };
+		8EFBC32621A5A2F300E03284 /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		8EFEDB2721A42EE900859672 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		8EFEDB2821A42EE900859672 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		8EFEDB2B21A42FE900859672 /* WikipediaPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaPage.swift; sourceTree = "<group>"; };
@@ -66,6 +92,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EFBC32821A5A2F300E03284 /* RxTest.framework in Frameworks */,
+				8EFBC32321A5A2F200E03284 /* RxCocoa.framework in Frameworks */,
+				8EFBC32421A5A2F200E03284 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -108,15 +137,50 @@
 		8EFBC31021A5894F00E03284 /* RxSample4Tests */ = {
 			isa = PBXGroup;
 			children = (
-				8EFBC31921A58B9F00E03284 /* WikipediaAPIClientTest.swift */,
+				8EFBC31E21A5A02400E03284 /* API */,
+				8EFBC32121A5A04600E03284 /* Screens */,
+				8EFBC31D21A59FFD00E03284 /* Mock */,
 				8EFBC31321A5894F00E03284 /* Info.plist */,
 			);
 			path = RxSample4Tests;
 			sourceTree = "<group>";
 		};
+		8EFBC31D21A59FFD00E03284 /* Mock */ = {
+			isa = PBXGroup;
+			children = (
+				8EFBC31B21A59F4300E03284 /* MockWikipediaAPIClient.swift */,
+			);
+			path = Mock;
+			sourceTree = "<group>";
+		};
+		8EFBC31E21A5A02400E03284 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8EFBC31921A58B9F00E03284 /* WikipediaAPIClientTest.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8EFBC32121A5A04600E03284 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8EFBC32221A5A05300E03284 /* WikipediaSearch */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8EFBC32221A5A05300E03284 /* WikipediaSearch */ = {
+			isa = PBXGroup;
+			children = (
+				8EFBC31F21A5A04100E03284 /* WikipediaSearchViewModelTest.swift */,
+			);
+			path = WikipediaSearch;
+			sourceTree = "<group>";
+		};
 		8EFEDB2621A42EE800859672 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				8EFBC32621A5A2F300E03284 /* RxTest.framework */,
 				8EFEDB2821A42EE900859672 /* RxCocoa.framework */,
 				8EFEDB2721A42EE900859672 /* RxSwift.framework */,
 			);
@@ -187,6 +251,7 @@
 				8EFBC30B21A5894F00E03284 /* Sources */,
 				8EFBC30C21A5894F00E03284 /* Frameworks */,
 				8EFBC30D21A5894F00E03284 /* Resources */,
+				8EFBC32921A5AD0600E03284 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -298,7 +363,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EFBC32021A5A04100E03284 /* WikipediaSearchViewModelTest.swift in Sources */,
 				8EFBC31A21A58B9F00E03284 /* WikipediaAPIClientTest.swift in Sources */,
+				8EFBC31C21A59F4300E03284 /* MockWikipediaAPIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +562,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxSample4Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -514,6 +585,10 @@
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxSample4Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
