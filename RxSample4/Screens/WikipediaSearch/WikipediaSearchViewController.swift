@@ -19,7 +19,7 @@ final class WikipediaSearchViewController: UIViewController {
     private let disposeBag = DisposeBag()
     
     private let viewModel: WikipediaSearchViewModel = {
-        let apiClient = WikipediaAPIClient()
+        let apiClient = WikipediaAPIClient(urlSession: .shared)
         let dependency = WikipediaSearchViewModel.Dependency(apiClient: apiClient)
         return WikipediaSearchViewModel(dependency)
     }()

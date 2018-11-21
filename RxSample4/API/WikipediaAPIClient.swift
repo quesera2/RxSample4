@@ -18,8 +18,8 @@ final class WikipediaAPIClient: WikipediaAPIClientProtocol {
 
     private let session: URLSession
     
-    init(_ session: URLSession = URLSession.shared) {
-        self.session = session
+    init(urlSession: URLSession) {
+        session = urlSession
     }
     
     func search(_ query: String) -> Single<[WikipediaPage]> {
