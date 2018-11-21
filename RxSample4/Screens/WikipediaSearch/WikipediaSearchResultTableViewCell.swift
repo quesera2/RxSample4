@@ -12,7 +12,7 @@ class WikipediaSearchResultTableViewCell: UITableViewCell {
     
     func update(_ data: WikipediaPage) {
         textLabel?.text = data.title
-        detailTextLabel?.text = data.url.absoluteString
+        detailTextLabel?.text = data.urlString
     }
     
     override func prepareForReuse() {

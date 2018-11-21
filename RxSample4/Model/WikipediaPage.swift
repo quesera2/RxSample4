@@ -12,12 +12,16 @@ struct WikipediaPage: Equatable, Decodable {
     let id: Int
     let title: String
     
-    var url: URL {
-        return URL(string: "https://ja.wikipedia.org/w/index.php?curid=\(id)")!
-    }
-    
     private enum CodingKeys: String, CodingKey {
         case id = "pageid"
         case title
     }
+}
+
+extension WikipediaPage {
+    
+    var urlString: String { return "https://ja.wikipedia.org/w/index.php?curid=\(id)" }
+    
+    var url: URL { return URL(string: urlString)! }
+
 }
