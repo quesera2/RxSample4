@@ -12,6 +12,7 @@
 		8E9D10C521A42BDE00D73E7A /* WikipediaSearch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D10C321A42BDE00D73E7A /* WikipediaSearch.storyboard */; };
 		8E9D10C721A42BDF00D73E7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D10C621A42BDF00D73E7A /* Assets.xcassets */; };
 		8E9D10CA21A42BDF00D73E7A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D10C821A42BDF00D73E7A /* LaunchScreen.storyboard */; };
+		8EFBC31A21A58B9F00E03284 /* WikipediaAPIClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBC31921A58B9F00E03284 /* WikipediaAPIClientTest.swift */; };
 		8EFEDB2921A42EE900859672 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EFEDB2721A42EE900859672 /* RxSwift.framework */; };
 		8EFEDB2A21A42EE900859672 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EFEDB2821A42EE900859672 /* RxCocoa.framework */; };
 		8EFEDB2C21A42FE900859672 /* WikipediaPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEDB2B21A42FE900859672 /* WikipediaPage.swift */; };
@@ -21,6 +22,16 @@
 		8EFEDB3921A43F0700859672 /* WikipediaSearchResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEDB3821A43F0700859672 /* WikipediaSearchResultTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		8EFBC31421A5894F00E03284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E9D10B421A42BDE00D73E7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E9D10BB21A42BDE00D73E7A;
+			remoteInfo = RxSample4;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		8E9D10BC21A42BDE00D73E7A /* RxSample4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxSample4.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E9D10BF21A42BDE00D73E7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -29,6 +40,9 @@
 		8E9D10C621A42BDF00D73E7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E9D10C921A42BDF00D73E7A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E9D10CB21A42BDF00D73E7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EFBC30F21A5894F00E03284 /* RxSample4Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSample4Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8EFBC31321A5894F00E03284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8EFBC31921A58B9F00E03284 /* WikipediaAPIClientTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaAPIClientTest.swift; sourceTree = "<group>"; };
 		8EFEDB2721A42EE900859672 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 		8EFEDB2821A42EE900859672 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		8EFEDB2B21A42FE900859672 /* WikipediaPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikipediaPage.swift; sourceTree = "<group>"; };
@@ -48,6 +62,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8EFBC30C21A5894F00E03284 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -55,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				8E9D10BE21A42BDE00D73E7A /* RxSample4 */,
+				8EFBC31021A5894F00E03284 /* RxSample4Tests */,
 				8E9D10BD21A42BDE00D73E7A /* Products */,
 				8EFEDB2621A42EE800859672 /* Frameworks */,
 			);
@@ -64,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				8E9D10BC21A42BDE00D73E7A /* RxSample4.app */,
+				8EFBC30F21A5894F00E03284 /* RxSample4Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -80,6 +103,15 @@
 				8E9D10CB21A42BDF00D73E7A /* Info.plist */,
 			);
 			path = RxSample4;
+			sourceTree = "<group>";
+		};
+		8EFBC31021A5894F00E03284 /* RxSample4Tests */ = {
+			isa = PBXGroup;
+			children = (
+				8EFBC31921A58B9F00E03284 /* WikipediaAPIClientTest.swift */,
+				8EFBC31321A5894F00E03284 /* Info.plist */,
+			);
+			path = RxSample4Tests;
 			sourceTree = "<group>";
 		};
 		8EFEDB2621A42EE800859672 /* Frameworks */ = {
@@ -148,6 +180,24 @@
 			productReference = 8E9D10BC21A42BDE00D73E7A /* RxSample4.app */;
 			productType = "com.apple.product-type.application";
 		};
+		8EFBC30E21A5894F00E03284 /* RxSample4Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8EFBC31821A5894F00E03284 /* Build configuration list for PBXNativeTarget "RxSample4Tests" */;
+			buildPhases = (
+				8EFBC30B21A5894F00E03284 /* Sources */,
+				8EFBC30C21A5894F00E03284 /* Frameworks */,
+				8EFBC30D21A5894F00E03284 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8EFBC31521A5894F00E03284 /* PBXTargetDependency */,
+			);
+			name = RxSample4Tests;
+			productName = RxSample4Tests;
+			productReference = 8EFBC30F21A5894F00E03284 /* RxSample4Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -160,6 +210,10 @@
 				TargetAttributes = {
 					8E9D10BB21A42BDE00D73E7A = {
 						CreatedOnToolsVersion = 10.1;
+					};
+					8EFBC30E21A5894F00E03284 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 8E9D10BB21A42BDE00D73E7A;
 					};
 				};
 			};
@@ -177,6 +231,7 @@
 			projectRoot = "";
 			targets = (
 				8E9D10BB21A42BDE00D73E7A /* RxSample4 */,
+				8EFBC30E21A5894F00E03284 /* RxSample4Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -189,6 +244,13 @@
 				8E9D10CA21A42BDF00D73E7A /* LaunchScreen.storyboard in Resources */,
 				8E9D10C721A42BDF00D73E7A /* Assets.xcassets in Resources */,
 				8E9D10C521A42BDE00D73E7A /* WikipediaSearch.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8EFBC30D21A5894F00E03284 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,7 +294,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		8EFBC30B21A5894F00E03284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EFBC31A21A58B9F00E03284 /* WikipediaAPIClientTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8EFBC31521A5894F00E03284 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E9D10BB21A42BDE00D73E7A /* RxSample4 */;
+			targetProxy = 8EFBC31421A5894F00E03284 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		8E9D10C321A42BDE00D73E7A /* WikipediaSearch.storyboard */ = {
@@ -412,6 +490,44 @@
 			};
 			name = Release;
 		};
+		8EFBC31621A5894F00E03284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RxSample4Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = que.sera.sera.RxSample4Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxSample4.app/RxSample4";
+			};
+			name = Debug;
+		};
+		8EFBC31721A5894F00E03284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = RxSample4Tests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = que.sera.sera.RxSample4Tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RxSample4.app/RxSample4";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -429,6 +545,15 @@
 			buildConfigurations = (
 				8E9D10CF21A42BDF00D73E7A /* Debug */,
 				8E9D10D021A42BDF00D73E7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8EFBC31821A5894F00E03284 /* Build configuration list for PBXNativeTarget "RxSample4Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8EFBC31621A5894F00E03284 /* Debug */,
+				8EFBC31721A5894F00E03284 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

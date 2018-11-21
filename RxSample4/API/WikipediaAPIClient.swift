@@ -32,7 +32,7 @@ final class WikipediaAPIClient: WikipediaAPIClientProtocol {
             .asSingle()
     }
     
-    private func createRequest(_ query: String) -> URLRequest {
+    internal func createRequest(_ query: String) -> URLRequest {
         let url = buildURL(query)
         return URLRequest(url: url)
     }
@@ -49,7 +49,7 @@ final class WikipediaAPIClient: WikipediaAPIClientProtocol {
         return components.url!
     }
     
-    private func mapToResult(response: HTTPURLResponse, data: Data) throws -> [WikipediaPage] {
+    internal func mapToResult(response: HTTPURLResponse, data: Data) throws -> [WikipediaPage] {
         let response = try JSONDecoder().decode(WikipediaSearchResponse.self, from: data)
         return response.pages
     }
