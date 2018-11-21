@@ -37,7 +37,12 @@ class WikipediaSearchViewController: UIViewController {
             .debounce(0.3, scheduler: MainScheduler.instance)
             .asObservable()
         
-        let input = WikipediaSearchViewModel.Input(queryText: query)
+        let cellSelected = tableView.rx
+            .modelSelected(WikipediaPage.self)
+            .asObservable()
+        
+        let input = WikipediaSearchViewModel.Input(queryText: query,
+                                                   cellSelected: cellSelected)
         
         let output = viewModel.transform(input)
         
@@ -49,10 +54,9 @@ class WikipediaSearchViewController: UIViewController {
             .drive(navigationItem.rx.title)
             .disposed(by: disposeBag)
         
-        tableView.rx
-            .modelSelected(WikipediaPage.self)
-            .subscribe(onNext: { [weak self] item in
-                let safariViewController = SFSafariViewController(url: item.url)
+        output.showWikipediaPage
+            .emit(onNext: { [weak self] url in
+                let safariViewController = SFSafariViewController(url: url)
                 self?.present(safariViewController, animated: true)
             })
             .disposed(by: disposeBag)

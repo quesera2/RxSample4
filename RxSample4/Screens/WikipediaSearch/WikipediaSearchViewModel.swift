@@ -28,11 +28,13 @@ struct WikipediaSearchViewModel: ViewModelType {
     
     struct Input {
         let queryText: Observable<String>
+        let cellSelected: Observable<WikipediaPage>
     }
     
     struct Output {
         let searchResult: Driver<[WikipediaPage]>
         let navigationTitle: Driver<String>
+        let showWikipediaPage: Signal<URL>
     }
     
     private let apiClient: WikipediaAPIClientProtocol
@@ -52,8 +54,12 @@ struct WikipediaSearchViewModel: ViewModelType {
         
         let title = Observable.combineLatest(searchWord, result, resultSelector: createTitle)
         
+        let selectedUrl = input.cellSelected
+            .map { $0.url }
+        
         return Output(searchResult: result.asDriver(onErrorDriveWith: .empty()),
-                      navigationTitle: title.asDriver(onErrorDriveWith: .empty()))
+                      navigationTitle: title.asDriver(onErrorDriveWith: .empty()),
+                      showWikipediaPage: selectedUrl.asSignal(onErrorSignalWith: .empty()))
     }
     
     private func createTitle(query: String, result: [WikipediaPage]) -> String {
